@@ -12,6 +12,9 @@
       }
     }
   }
+  definePageMeta({
+    layout: "users"
+  })
 </script>
 <style>
   h1 {

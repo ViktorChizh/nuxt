@@ -1,34 +1,21 @@
 <template>
-  <div>
-    <header>
-      <ul>
-        <li><NuxtLink to="/contact">Contact</NuxtLink></li>
-        <li><NuxtLink to="/users">Users</NuxtLink></li>
-      </ul>
-    </header>
     <h1>Hello world!!!</h1>
-    <p>{{ some }}</p>
-  </div>
+    <Alert color="primary">{{ data.mess }}</Alert>
 </template>
-<script>
-  export default {
-    data() {
-      return {
-        some: "info"
-      }
-    }
-  }
+
+<script setup>
+  const {data} = await useFetch('/api/example')
 </script>
+
 <style>
+  header a.router-link-exact-active {
+    color: #ffb636!important;
+    font-weight: 500;
+  }
+  header a:not(.router-link-exact-active):hover {
+    text-decoration: underline;
+  }
   h1 {
     color: red
-  }
-  ul {
-    display: flex;
-    justify-self: start;
-    gap: 50px;
-    li {
-      list-style-type: none;
-    }
   }
 </style>

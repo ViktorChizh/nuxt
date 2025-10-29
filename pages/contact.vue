@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NuxtLink to="/">Home</NuxtLink>
     <h1>CONTACT</h1>
     <p>{{ some }}</p>
   </div>
