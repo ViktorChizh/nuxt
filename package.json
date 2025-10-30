@@ -8,7 +8,7 @@
     "start": "nuxt start"
   },
   "dependencies": {
-    "nuxt": "^4.2.0",
-    "usebootstrap": "^3.5.107"
+    "nuxt": "3.20.0",
+    "usebootstrap": "3.5.107"
   }
 }

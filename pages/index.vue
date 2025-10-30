@@ -4,7 +4,10 @@
 </template>
 
 <script setup>
-  const {data} = await useFetch('/api/example')
+  const {data} = await useFetch('/api/example', {
+    method: 'post',
+    body: {name: 'Alex', id: 1}
+  })
 </script>
 
 <style>
