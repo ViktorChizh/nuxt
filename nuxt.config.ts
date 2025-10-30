@@ -5,4 +5,12 @@ export default defineNuxtConfig({
   modules: [
     'usebootstrap'
   ],
+  app: {
+    head: {
+      title: "Nuxt site",
+      meta: [
+        {name: 'charset', content: 'utf-8'}
+      ]
+    }
+  }
 })

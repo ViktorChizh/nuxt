@@ -1,5 +1,9 @@
 <template>
   <div>
+    <Head>
+      <Title>Users</Title>
+      <Meta name="description" content="All users" />
+    </Head>
     <h1>USERS</h1>
     <ul class="d-flex flex-wrap justify-content-between list-unstyled gap-3">
       <li v-for="user in users" :key="user.id">
@@ -9,7 +13,7 @@
   </div>
 </template>
 <script setup>
-import UserLink from '../../components/UserLink.vue';
+  import UserLink from '../../components/UserLink.vue';
 
   definePageMeta({
     layout: "users"

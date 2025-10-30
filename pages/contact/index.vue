@@ -13,6 +13,12 @@
     </div>
 </template>
 <script setup>
+  useHead({
+    title: "Contacts",
+    meta: [
+      {name: 'description', content: "Contact Page"}
+    ]
+  })
   const name = ref('')
   const email = ref('')
   const message = ref('')
