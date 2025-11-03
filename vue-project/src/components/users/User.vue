@@ -30,7 +30,7 @@
     border: 0;
     border-radius: 5px;
     outline: none;
-    padding: 10px;
+    padding: 5px;
     background: #d66c75;
     color: #7f1629;
     font-weight: bold;

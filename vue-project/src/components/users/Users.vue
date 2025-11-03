@@ -66,7 +66,7 @@
     border-radius: 3px;
     border: 1px solid silver;
     outline: none;
-    padding: 10px 15px;
+    padding: 5px 15px;
     background: #fafafa;
     color: #333;
   }
@@ -89,7 +89,7 @@
     margin-top: 20px;
     border: 1px solid silver;
     background: #e3e3e3;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
   }
 </style>
