@@ -51,7 +51,13 @@
                 this.error = ''
                 axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=metric&appid=06aa3ac5c903d381675b2d159d6de784`)
                     .then(res => this.info = res.data.main)
-                    .catch(res => this.error = "Некорректное название города")
+                    .catch(err =>  {
+                        if(err == 'AxiosError: Network Error'){
+                            this.error = "Отсутствует интернет"
+                        } else {
+                            this.error = "Некорректное название города"
+                        }
+                    })
             }
         },
         watch: {
