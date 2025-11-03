@@ -52,6 +52,11 @@
                 axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=metric&appid=06aa3ac5c903d381675b2d159d6de784`)
                     .then(res => this.info = res.data.main)
             }
+        },
+        watch: {
+            city() {
+                this.info = null;
+            }
         }
     }
 </script>
@@ -60,7 +65,7 @@
     .wrapper {
         margin: 20px;
         width: 900px;
-        height: 400px;
+        height: 330px;
         border-radius: 50px;
         background: #1f0f24;
         padding: 20px;
@@ -75,9 +80,6 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-        }
-        h1 {
-            margin-top: 50px;
         }
         p {
             margin-top: 20px;
