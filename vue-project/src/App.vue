@@ -1,13 +1,13 @@
 <template>
   <Users/>
-  <Nature />
+  <Weather />
 </template>
 
 <script>
   import Users from "./components/users/Users.vue"
-  import Nature from "./components/nature/Nature.vue"
+  import Weather from "./components/weather/Weather.vue"
   export default {
-    components: {Users, Nature},
+    components: {Users, Weather},
   }
 </script>
 

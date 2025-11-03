@@ -28,7 +28,7 @@
         computed: {
             cityName() {
                 return 'городе «' + this.city + '»'
-            }, 
+            },
             showTemp() {
                 return "Температура: " + this.info.temp
             },
