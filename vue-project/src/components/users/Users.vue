@@ -46,6 +46,7 @@
           this.error = 'Email не введен'
           return
         }
+        this.error = ''
         this.users.push({
           name: this.userName,
           pass: this.userPass,
@@ -54,6 +55,17 @@
       },
       deleteUser(index) {
         this.users.splice(index, 1)
+      }
+    },
+    watch: {
+      userName(){
+        this.error = ''
+      },
+      userPass(){
+        this.error = ''
+      },
+      userEmail() {
+        this.error = ''
       }
     }
   }
@@ -91,5 +103,9 @@
     background: #e3e3e3;
     padding: 10px;
     border-radius: 5px;
+  }
+  p {
+    color: red;
+    margin: 5px 0;
   }
 </style>
