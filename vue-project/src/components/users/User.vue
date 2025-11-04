@@ -1,5 +1,5 @@
 <template>
-  <div className="user">
+  <div class="user">
     <button @click="deleteUser(index)">X</button>
     <h3>{{ user.name }}</h3>
     <p>{{ user.email }} - <b>{{ user.pass }}</b></p>

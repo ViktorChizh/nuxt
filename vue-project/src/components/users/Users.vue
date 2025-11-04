@@ -2,20 +2,20 @@
   <input type="text" v-model="userName" placeholder="Имя">
   <input type="password" v-model="userPass" placeholder="Пароль">
   <input type="email" v-model="userEmail" placeholder="Email">
-  <p className="error">{{ error }}</p>
+  <p class="error">{{ error }}</p>
   <button @click="sendData()">Отправить</button>
-  <div v-if="users.length == 0" className="user">
+  <div v-if="users.length == 0" class="user">
     We're don't have users
   </div>
-  <div v-else-if="users.length == 1" className="user">
+  <div v-else-if="users.length == 1" class="user">
     Users has 1 element
   </div>
-  <div v-else className="user">
+  <div v-else class="user">
     Users has more than 1 element
   </div>
   <User v-for="(el,index) in users"
     :key="index"
-    className="user"
+    class="user"
     :user="el"
     :index="index"
     :deleteUser="deleteUser"/>
