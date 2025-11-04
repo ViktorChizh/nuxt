@@ -27,7 +27,7 @@
         },
         computed: {
             cityName() {
-                return 'городе «' + this.city.toUpperCase() + '»'
+                return 'городе ' + this.city[0].toUpperCase() + this.city.split('').splice(1).join('').toLowerCase()
             },
             showTemp() {
                 return "Температура: " + this.info.temp
