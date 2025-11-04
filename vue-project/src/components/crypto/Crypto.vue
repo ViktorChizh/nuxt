@@ -72,12 +72,15 @@
         watch: {
             cryptoFrom() {
                 this.result = 0
+                this.error = ''
             },
             cryptoTo() {
                 this.result = 0
+                this.error = ''
             },
             amount() {
                 this.result = 0
+                this.error = ''
             }
         }
     }
