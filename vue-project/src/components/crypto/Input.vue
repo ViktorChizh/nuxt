@@ -5,6 +5,7 @@
     @input="changeAmount($event.target.value)"
     placeholder="Введите число"><br>
     <button @click="convert()">КОНВЕРТИРОВАТЬ</button>
+    <button @click="favorite()" class='favorite'>ДОБАВИТЬ В ИЗБРАННОЕ</button>
 </template>
 
 <script>
@@ -17,13 +18,16 @@
             convert: {
                 type: Function,
                 required: true
+            },
+            favorite: {
+                type: Function,
+                required: true
             }
         }
     }
 </script>
 
-<style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+<style>
     input {
         font-family: 'Montserrat', sans-serif;
         outline: none;
@@ -43,5 +47,8 @@
         background: #1a032d;
         border: 0;
         border-radius: 5px;
+    }
+    .favorite {
+        margin-left: 50px;
     }
 </style>

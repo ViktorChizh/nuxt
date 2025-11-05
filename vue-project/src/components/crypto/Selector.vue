@@ -1,8 +1,8 @@
 <template>
     <ul>
-        <li @click="selectItem('Bitcoin')" :class="current=='Bitcoin' && 'active'">Bitcoin</li>
-        <li @click="selectItem('USDT')" :class="current=='USDT' ? 'active' : ''">USDT</li>
-        <li @click="selectItem('ETH')" :class="current=='ETH' ? 'active' : ''">ETH</li>
+        <li @click="setCrypto('Bitcoin')" :class="crypto=='Bitcoin' && 'active'">Bitcoin</li>
+        <li @click="setCrypto('USDT')" :class="crypto=='USDT' ? 'active' : ''">USDT</li>
+        <li @click="setCrypto('ETH')" :class="crypto=='ETH' ? 'active' : ''">ETH</li>
     </ul>
 </template>
 
@@ -12,23 +12,16 @@
             setCrypto: {
                 type: Function,
                 required: true
-            }
-        },
-        data() {
-            return {
-                current: ''
-            }
-        },
-        methods: {
-            selectItem(val) {
-                this.setCrypto(val)
-                this.current = val
+            },
+            crypto: {
+                type: String,
+                required: true
             }
         }
     }
 </script>
 
-<style scoped>
+<style>
     ul {
         list-style: none;
         width: 200px;
@@ -39,7 +32,7 @@
             display: block;
             background: #1a032d;
             color: #fff;
-            padding: 20px 0;
+            padding: 5px 0;
         }
         li:hover,
         li.active {
